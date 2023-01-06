@@ -14,6 +14,9 @@
 		50DFC8882967BAF5007CED07 /* GraphicBossTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFC8872967BAF5007CED07 /* GraphicBossTests.swift */; };
 		50DFC8922967BAF5007CED07 /* GraphicBossUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFC8912967BAF5007CED07 /* GraphicBossUITests.swift */; };
 		50DFC8942967BAF5007CED07 /* GraphicBossUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFC8932967BAF5007CED07 /* GraphicBossUITestsLaunchTests.swift */; };
+		50DFC8A42967C434007CED07 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFC8A32967C434007CED07 /* TabBar.swift */; };
+		50DFC8A62967C849007CED07 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFC8A52967C849007CED07 /* Today.swift */; };
+		50DFC8A92967D622007CED07 /* TodayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFC8A82967D622007CED07 /* TodayItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		50DFC88D2967BAF5007CED07 /* GraphicBossUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphicBossUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DFC8912967BAF5007CED07 /* GraphicBossUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicBossUITests.swift; sourceTree = "<group>"; };
 		50DFC8932967BAF5007CED07 /* GraphicBossUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicBossUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		50DFC8A32967C434007CED07 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		50DFC8A52967C849007CED07 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
+		50DFC8A82967D622007CED07 /* TodayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 		50DFC8752967BAF4007CED07 /* GraphicBoss */ = {
 			isa = PBXGroup;
 			children = (
+				50DFC8A72967D5F2007CED07 /* Models */,
 				50DFC8762967BAF4007CED07 /* GraphicBossApp.swift */,
-				50DFC8782967BAF4007CED07 /* ContentView.swift */,
+				50DFC8A02967BD30007CED07 /* Views */,
 				50DFC87A2967BAF5007CED07 /* Assets.xcassets */,
 				50DFC87C2967BAF5007CED07 /* Preview Content */,
 			);
@@ -125,6 +132,24 @@
 				50DFC8932967BAF5007CED07 /* GraphicBossUITestsLaunchTests.swift */,
 			);
 			path = GraphicBossUITests;
+			sourceTree = "<group>";
+		};
+		50DFC8A02967BD30007CED07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50DFC8782967BAF4007CED07 /* ContentView.swift */,
+				50DFC8A32967C434007CED07 /* TabBar.swift */,
+				50DFC8A52967C849007CED07 /* Today.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50DFC8A72967D5F2007CED07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50DFC8A82967D622007CED07 /* TodayItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50DFC8A42967C434007CED07 /* TabBar.swift in Sources */,
+				50DFC8A92967D622007CED07 /* TodayItem.swift in Sources */,
 				50DFC8792967BAF4007CED07 /* ContentView.swift in Sources */,
 				50DFC8772967BAF4007CED07 /* GraphicBossApp.swift in Sources */,
+				50DFC8A62967C849007CED07 /* Today.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +448,13 @@
 				DEVELOPMENT_TEAM = W59W3QVKXJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Graphics Boss";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +479,13 @@
 				DEVELOPMENT_TEAM = W59W3QVKXJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Graphics Boss";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
