@@ -21,5 +21,7 @@ struct TodayItem: Identifiable {
 }
 
 var items = [
-    TodayItem(title: "Eat me", category: "Fantasy Graphics", overlay: "GRAPHICS OF THE DAY", contentImage: "pic4", logo: <#T##String#>)
+    TodayItem(title: "Eat me", category: "Fantasy Graphics", overlay: "GRAPHICS OF THE DAY", contentImage: "pic2", logo: "pic4"),
+    TodayItem(title: "Roblox", category: "Adventure", overlay: "Something Interesting", contentImage: "pic5", logo: "pic7")
+    
 ]

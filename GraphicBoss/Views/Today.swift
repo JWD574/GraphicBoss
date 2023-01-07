@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct Today: View {
+    //MARK:  PROPERTIES
+    var animation: Namespace.ID
+    @EnvironmentObject var detail : DetailViewModel
+    
+    
     var body: some View {
         
         ScrollView {
@@ -36,15 +41,33 @@ struct Today: View {
                     }
                 }
                 .padding( )
+                
+                ForEach(items) { item in
+                    
+                    
+                    
+                
+                
+                //MARK:  CARD VIEW
+                
+                    
+                    TodayCardView(item: item, animation: animation)
+                        .onTapGesture {
+                            withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0.8)) {
+                                
+                                detail.selectedItem = item
+                                detail.show.toggle( )
+                            }
+                        }
+                    
             }
+            }
+            .padding(.bottom)
         }
         //nice black background -not glossy when in dark mode
         .background(Color.primary.opacity(0.06).ignoresSafeArea( ))
     }
 }
+// MARK:  HERO ANIMATIONS
 
-struct Today_Previews: PreviewProvider {
-    static var previews: some View {
-        Today()
-    }
-}
+
